@@ -1,0 +1,22 @@
+<h1><%= link.Link %></h1>
+
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= linksPath() %>" class="btn btn-info">Back to all Links</a></li>
+  <li><a href="<%= editLinkPath({ link_id: link.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li><a href="<%= linkPath({ link_id: link.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+</ul>
+
+<p>
+  <strong>Original Link</strong>: <%= link.Link %>
+</p>
+<p>
+<strong>Short Link</strong>: <a href="<%= app.Host %>/<%= link.Code %>" target="_blank"><%= app.Host %>/<%= link.Code %></a>
+</p>
+
+<%= if (len(clicks) > 0) { %>
+  <canvas id="click-chart"></canvas>
+<% } %>
+
+<script charset="utf-8">
+  clicks = <%= json(clicks) %>;
+</script>

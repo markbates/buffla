@@ -1,0 +1,7 @@
+create_table("users", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("name", "string", {})
+	t.Column("email", "string", {"null": true})
+	t.Column("provider", "string", {})
+	t.Column("provider_id", "string", {})
+})

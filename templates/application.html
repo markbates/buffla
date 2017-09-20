@@ -1,18 +1,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Buffalo - Buffla</title>
+    <title>Buff.la</title>
     <%= stylesheetTag("application.css") %>
     <meta name="csrf-param" content="authenticity_token" />
     <meta name="csrf-token" content="<%= authenticity_token %>" />
   </head>
   <body>
+    <%= partial("nav.html") %>
 
     <div class="container">
       <%= partial("flash.html") %>
       <%= yield %>
     </div>
-    
+
+    <%= partial("footer.html") %>
+
     <%= javascriptTag("application.js") %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js" charset="utf-8"></script>
   </body>
 </html>
