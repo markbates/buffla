@@ -1,0 +1,3 @@
+[[constraint]]
+  branch = "development"
+  name = "github.com/gobuffalo/buffalo"

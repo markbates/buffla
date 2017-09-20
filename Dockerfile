@@ -10,7 +10,7 @@ ADD package.json .
 ADD yarn.lock .
 RUN yarn install --no-progress
 ADD . .
-RUN go get $(go list ./... | grep -v /vendor/)
+RUN dep ensure
 RUN buffalo build --static -o /bin/app
 
 FROM alpine
