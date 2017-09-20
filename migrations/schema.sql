@@ -34,7 +34,7 @@ SET search_path = public, pg_catalog;
 -- Name: click_activity(uuid); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION click_activity(_link_id uuid) RETURNS TABLE(click_activity bigint, click_date date)
+CREATE FUNCTION click_activity(_link_id uuid) RETURNS TABLE(count bigint, date date)
     LANGUAGE sql
     AS $_$
 SELECT

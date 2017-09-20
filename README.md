@@ -1,37 +1,27 @@
-# Welcome to Buffalo!
+# Buff.la - URL Shortner Example
 
-Thank you for choosing Buffalo for your web development needs.
+This application is an example of writing a URL shortner using [Buffalo](https://gobuffalo.io). The application can be found live on the web at [https://buff.la](https://buff.la).
 
+## Running Locally
 
-## Database Setup
+### Requirements
 
-It looks like you chose to set up your application using a postgres database! Fantastic!
+* [dep](https://github.com/golang/dep)
+* Postgres
+* Node/Yarn
+* [Buffalo](https://github.com/gobuffalo/buffalo) - v0.9.5 (or later or `development` branch)
 
-The first thing you need to do is open up the "database.yml" file and edit it to use the correct usernames, passwords, hosts, etc... that are appropriate for your environment.
+### Installation
 
-You will also need to make sure that **you** start/install the database of your choice. Buffalo **won't** install and start postgres for you.
+First, make sure you have all of the above dependencies setup and running (as appropriate).
 
-### Create Your Databases
+1. Get the repo: `go get -v github.com/gobuffalo/buffla`.
+1. Make sure `database.yml` is configured for your Postgres instance.
+1. Run `buffalo setup`.
+1. Setup OAuth keys for either GitHub, FaceBook, or Twitter (so you can log into the application). See `actions/auth.go` for what to name the keys.
+1. Run `buffalo dev` - to run the application in development.
+1. Have Fun!!
 
-Ok, so you've edited the "database.yml" file and started postgres, now Buffalo can create the databases in that file for you:
-
-	$ buffalo db create -a
-
-
-## Starting the Application
-
-Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
-
-	$ buffalo dev
-
-If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
-
-**Congratulations!** You now have your Buffalo application up and running.
-
-## What Next?
-
-We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
-
-Good luck!
+---
 
 [Powered by Buffalo](http://gobuffalo.io)
