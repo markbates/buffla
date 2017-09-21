@@ -1,0 +1,4 @@
+add_index("users", ["provider", "provider_id"], {"unique": true})
+add_index("links", "user_id", {})
+add_index("links", "code", {"unique": true})
+add_index("clicks", "link_id", {})

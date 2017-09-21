@@ -153,6 +153,34 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: clicks_link_id_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX clicks_link_id_idx ON clicks USING btree (link_id);
+
+
+--
+-- Name: links_code_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE UNIQUE INDEX links_code_idx ON links USING btree (code);
+
+
+--
+-- Name: links_user_id_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX links_user_id_idx ON links USING btree (user_id);
+
+
+--
+-- Name: users_provider_provider_id_idx; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE UNIQUE INDEX users_provider_provider_id_idx ON users USING btree (provider, provider_id);
+
+
+--
 -- Name: version_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
