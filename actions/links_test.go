@@ -134,3 +134,19 @@ func (as *ActionSuite) Test_LinksResource_Destroy_NotOwner() {
 	res := as.HTML("/links/%s", link.ID).Delete()
 	as.Equal(404, res.Code)
 }
+
+func (as *ActionSuite) Test_Redirector() {
+	link := as.CreateLink(as.CreateUser())
+
+	count, err := as.DB.Count("clicks")
+	as.NoError(err)
+	as.Equal(0, count)
+
+	res := as.HTML("/%s", link.Code).Get()
+	as.Equal(302, res.Code)
+	as.Equal(link.Link, res.Location())
+
+	count, err = as.DB.Count("clicks")
+	as.NoError(err)
+	as.Equal(1, count)
+}

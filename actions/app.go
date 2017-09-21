@@ -62,7 +62,7 @@ func App() *buffalo.App {
 
 		app.Use(SetCurrentUser)
 		app.Use(Authorize)
-		app.Middleware.Skip(Authorize, HomeHandler)
+		app.Middleware.Skip(Authorize, HomeHandler, Redirector)
 		auth := app.Group("/auth")
 		bah := buffalo.WrapHandlerFunc(gothic.BeginAuthHandler)
 		auth.GET("/{provider}", bah)
