@@ -20,7 +20,7 @@ type Link struct {
 	UserID     uuid.UUID `json:"user_id" db:"user_id"`
 	Link       string    `json:"link" db:"link"`
 	Code       string    `json:"code" db:"code"`
-	ClickCount int       `json:"-" db:"-"`
+	ClickCount int       `json:"-" db:"-" form:"-"`
 }
 
 // String is not required by pop and may be deleted
