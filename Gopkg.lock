@@ -59,7 +59,7 @@
   branch = "development"
   name = "github.com/gobuffalo/buffalo"
   packages = [".","binding","middleware","middleware/csrf","middleware/i18n","middleware/ssl","render","worker"]
-  revision = "c0d080ddcf7da50c818c4d927b3bd3fd2c833b7b"
+  revision = "d6e4c4d7fd6a9997468753163ced4310cb15a67a"
 
 [[projects]]
   name = "github.com/gobuffalo/envy"
@@ -317,7 +317,7 @@
   branch = "master"
   name = "github.com/shurcooL/go"
   packages = ["parserutil","printerutil","reflectfind","reflectsource"]
-  revision = "85cf7b32989cc33f64afac4bc0e1ef4020b43669"
+  revision = "c661e953e604ba4a84a3c4e458462a481bd6ce72"
 
 [[projects]]
   branch = "master"
@@ -395,7 +395,7 @@
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context","context/ctxhttp","html","html/atom"]
-  revision = "411fb0e25fd2511cc621c22e3e602e4eca2314de"
+  revision = "b60f3a92103dfd93dfcb900ec77c6d0643510868"
 
 [[projects]]
   branch = "master"
