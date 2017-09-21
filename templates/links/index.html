@@ -7,13 +7,15 @@
   <thead>
     <th>Original Link</th>
     <th>Short Link</th>
+    <th>Clicks</th>
     <th>&nbsp;</th>
   </thead>
   <tbody>
     <%= for (link) in links { %>
       <tr>
-        <td><%= link.Link %></td>
+        <td><a href="<%= linkPath({ link_id: link.ID }) %>"><%= link.Link %></a></td>
         <td><a href="<%= app.Host %>/<%= link.Code %>" target="_blank"><%= app.Host %>/<%= link.Code %></a></td>
+        <td><%= link.ClickCount %></td>
         <td>
           <div class="pull-right">
             <a href="<%= linkPath({ link_id: link.ID }) %>" class="btn btn-info">View</a>

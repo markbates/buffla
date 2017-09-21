@@ -4,6 +4,7 @@ FROM gobuffalo/buffalo:development as builder
 
 RUN mkdir -p $GOPATH/src/github.com/markbates/buffla
 WORKDIR $GOPATH/src/github.com/markbates/buffla
+RUN go get -u -v github.com/gobuffalo/buffalo-xbuild
 
 # this will cache the npm install step, unless package.json changes
 ADD package.json .
@@ -11,7 +12,7 @@ ADD yarn.lock .
 RUN yarn install --no-progress
 ADD . .
 RUN dep ensure
-RUN buffalo build --static -o /bin/app
+RUN buffalo xbuild --static -o /bin/app -d
 
 FROM alpine
 RUN apk add --no-cache bash

@@ -14,12 +14,13 @@ import (
 )
 
 type Link struct {
-	ID        uuid.UUID `json:"id" db:"id"`
-	CreatedAt time.Time `json:"created_at" db:"created_at"`
-	UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
-	UserID    uuid.UUID `json:"user_id" db:"user_id"`
-	Link      string    `json:"link" db:"link"`
-	Code      string    `json:"code" db:"code"`
+	ID         uuid.UUID `json:"id" db:"id"`
+	CreatedAt  time.Time `json:"created_at" db:"created_at"`
+	UpdatedAt  time.Time `json:"updated_at" db:"updated_at"`
+	UserID     uuid.UUID `json:"user_id" db:"user_id"`
+	Link       string    `json:"link" db:"link"`
+	Code       string    `json:"code" db:"code"`
+	ClickCount int       `json:"-" db:"-"`
 }
 
 // String is not required by pop and may be deleted
