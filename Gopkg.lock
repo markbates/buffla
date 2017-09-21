@@ -59,7 +59,7 @@
   branch = "development"
   name = "github.com/gobuffalo/buffalo"
   packages = [".","binding","middleware","middleware/csrf","middleware/i18n","middleware/ssl","render","worker"]
-  revision = "d6e4c4d7fd6a9997468753163ced4310cb15a67a"
+  revision = "743e0e033c8dcbe507931a2be4dcd8037079f085"
 
 [[projects]]
   name = "github.com/gobuffalo/envy"
@@ -154,8 +154,8 @@
 [[projects]]
   name = "github.com/markbates/goth"
   packages = [".","gothic","providers/facebook","providers/github","providers/twitter"]
-  revision = "c130f2f2c7f8df53fdffb86f0b994e94014062b9"
-  version = "v1.41.0"
+  revision = "6c3a31e5f6aa001e8c3d6cec3f65d5bcc0240e69"
+  version = "v1.42.0"
 
 [[projects]]
   branch = "master"
