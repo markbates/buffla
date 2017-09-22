@@ -46,16 +46,6 @@ func (v LinksResource) List(c buffalo.Context) error {
 		return errors.WithStack(err)
 	}
 
-	tx := c.Value("tx").(*pop.Connection)
-	for i, l := range links {
-		count, err := tx.Where("link_id = ?", l.ID).Count("clicks")
-		if err != nil {
-			return errors.WithStack(err)
-		}
-		l.ClickCount = count
-		links[i] = l
-	}
-
 	// Make Links available inside the html template
 	c.Set("links", links)
 

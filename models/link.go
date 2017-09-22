@@ -20,7 +20,7 @@ type Link struct {
 	UserID     uuid.UUID `json:"user_id" db:"user_id"`
 	Link       string    `json:"link" db:"link"`
 	Code       string    `json:"code" db:"code"`
-	ClickCount int       `json:"-" db:"-" form:"-"`
+	ClickCount int       `json:"-" db:"click_count" form:"-" select:"(select count(*) from clicks where link_id = links.id) as click_count" rw:"r"`
 }
 
 // String is not required by pop and may be deleted

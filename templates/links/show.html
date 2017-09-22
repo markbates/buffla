@@ -10,7 +10,11 @@
   <strong>Original Link</strong>: <%= link.Link %>
 </p>
 <p>
-<strong>Short Link</strong>: <a href="<%= app.Host %>/<%= link.Code %>" target="_blank"><%= app.Host %>/<%= link.Code %></a>
+  <strong>Short Link</strong>: <a href="<%= app.Host %>/<%= link.Code %>" target="_blank"><%= app.Host %>/<%= link.Code %></a>
+</p>
+
+<p>
+  <strong>Total Clicks</strong>: <%= link.ClickCount %>
 </p>
 
 <%= if (len(clicks) > 0) { %>
