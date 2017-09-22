@@ -39,7 +39,7 @@ func (v LinksResource) List(c buffalo.Context) error {
 	// Default values are "page=1" and "per_page=20".
 	q := v.scope(c).PaginateFromParams(c.Params())
 	// You can order your list here. Just change
-	err := q.All(&links)
+	err := q.Order("click_count desc").All(&links)
 	// to:
 	// err := q.Order("created_at desc").All(links)
 	if err != nil {
