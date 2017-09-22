@@ -24,7 +24,20 @@ $(() => {
           }
         ]
       },
-      options: {}
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        },
+        legend: {
+          display: false
+        }
+      }
     });
   }
 });
