@@ -3,7 +3,7 @@
 
 [[projects]]
   branch = "master"
-  name = "dmitri.shuralyov.com/kebabcase"
+  name = "dmitri.shuralyov.com/text/kebabcase"
   packages = ["."]
   revision = "bf160e40a7918fbe9dc3cc841a023d87242bd2eb"
 
