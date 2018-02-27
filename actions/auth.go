@@ -5,6 +5,8 @@ import (
 	"os"
 
 	"github.com/gobuffalo/buffalo"
+	"github.com/gobuffalo/pop"
+	"github.com/gobuffalo/pop/nulls"
 	"github.com/markbates/buffla/models"
 	"github.com/markbates/going/defaults"
 	"github.com/markbates/goth"
@@ -12,8 +14,6 @@ import (
 	"github.com/markbates/goth/providers/facebook"
 	"github.com/markbates/goth/providers/github"
 	"github.com/markbates/goth/providers/twitter"
-	"github.com/markbates/pop"
-	"github.com/markbates/pop/nulls"
 	"github.com/pkg/errors"
 )
 

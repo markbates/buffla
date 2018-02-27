@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/gobuffalo/pop/nulls"
 	"github.com/gobuffalo/suite"
 	"github.com/markbates/buffla/models"
-	"github.com/markbates/pop/nulls"
 )
 
 type ActionSuite struct {

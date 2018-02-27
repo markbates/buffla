@@ -3,10 +3,10 @@ package actions
 import (
 	"net/http"
 
+	"github.com/gobuffalo/pop/nulls"
 	"github.com/markbates/buffla/models"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
-	"github.com/markbates/pop/nulls"
 )
 
 func (as *ActionSuite) Test_AuthCallback_NewUser() {

@@ -9,7 +9,7 @@ This application is an example of writing a URL shortner using [Buffalo](https:/
 * [dep](https://github.com/golang/dep)
 * Postgres
 * Node/Yarn
-* [Buffalo](https://github.com/gobuffalo/buffalo) - v0.9.5 (or later or `development` branch)
+* [Buffalo](https://github.com/gobuffalo/buffalo) - v0.11.0 (or later or `development` branch)
 
 ### Installation
 

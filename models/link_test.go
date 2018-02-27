@@ -1,8 +1,8 @@
 package models_test
 
 import (
+	"github.com/gobuffalo/uuid"
 	"github.com/markbates/buffla/models"
-	"github.com/satori/go.uuid"
 )
 
 func (ms *ModelSuite) Test_Link_BeforeValidations() {
